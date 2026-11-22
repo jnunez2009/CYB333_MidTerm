@@ -1,0 +1,65 @@
+# README – Python Socket Programming and Port Scanner
+
+## Project Overview
+
+This project demonstrates two basic Python networking tasks. Part 1 creates a server and client that communicate using TCP sockets. Part 2 creates a port scanner that checks TCP ports 20–443 on approved hosts. Both programs include error handling and input validation where needed.
+
+## Part 1: Server and Client Communication
+
+**Files:** `server.py` and `client.py`
+
+The server and client use Python's `socket` library to exchange messages over a TCP connection.
+
+**How to Run:**
+
+1. Open Visual Studio Code and open two terminals.
+2. In the first terminal, run `python server.py`.
+3. In the second terminal, run `python client.py`.
+4. Enter a message such as `Hello Server.` in the client terminal.
+5. Verify that the server receives the message and sends a response.
+6. Type `exit` to disconnect properly.
+7. Stop the server and run the client again to test connection error handling.
+
+**Expected Results:**
+
+- The client successfully connects to the server.
+- The server receives messages and sends responses.
+- The connection closes properly when the client exits.
+- The client displays an error if the server is unavailable.
+
+## Part 2: TCP Port Scanner
+
+**File:** `port_scanner.py`
+
+The port scanner uses Python's `socket` library to check TCP ports 20 through 443. It identifies open and closed ports on approved hosts and handles invalid inputs and connection errors.
+
+**How to Run:**
+
+1. Open Visual Studio Code.
+2. Open a terminal and run `python port_scanner.py`.
+3. Press Enter to scan the default IP address, `127.0.0.1`.
+4. Review the results for each port.
+5. Check the summary showing the number of open, closed, and other port results.
+6. Enter an invalid IP address to verify input validation.
+7. Test another approved host if authorized and configured in the script.
+
+**Expected Results:**
+
+- The program scans TCP ports 20–443.
+- Open and closed ports are identified.
+- Invalid or unauthorized IP addresses are rejected.
+- Connection errors and timeouts are handled.
+- A summary of the scan results is displayed.
+
+## Requirements
+
+- Python 3
+- Visual Studio Code or another Python development environment
+- Python's built-in `socket` and other standard libraries
+- Authorization to scan the selected host
+
+No additional Python packages are required.
+
+## Conclusion
+
+This project demonstrates basic Python networking and security automation. Part 1 shows how a client and server communicate and disconnect properly. Part 2 demonstrates how to scan approved hosts for open and closed TCP ports. Both programs help develop an understanding of network connections, error handling, and basic cybersecurity testing.
